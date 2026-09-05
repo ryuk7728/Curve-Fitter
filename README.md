@@ -1,31 +1,31 @@
 # Parametric Curve Parameter Recovery
 
-This repository recovers the unknown parameters \(\theta\), \(M\), and \(X\)
+This repository recovers the unknown parameters $\theta$, $M$, and $X$
 of the supplied parametric curve from the unordered points in `xy_data.csv`.
 
 ## Final result
 
 | Parameter | Recovered value |
 |---|---:|
-| \(\theta\) | \(29.999973^\circ\) |
-| \(M\) | \(0.0299999974\) |
-| \(X\) | \(54.9999982\) |
-| Mean L1 loss | \(2.5598\times10^{-6}\) |
+| $\theta$ | $29.999973^\circ$ |
+| $M$ | $0.0299999974$ |
+| $X$ | $54.9999982$ |
+| Mean L1 loss | $2.5598\times10^{-6}$ |
 
 These numerical values correspond to the clean solution
 
-\[
+$$
 \boxed{\theta=30^\circ,\qquad M=0.03,\qquad X=55}.
-\]
+$$
 
 The resulting curve is
 
-\[
+$$
 \left(
 t\cos\left(\frac{\pi}{6}\right)-e^{0.03|t|}\sin(0.3t)\sin\left(\frac{\pi}{6}\right)+55,
 \;42+t\sin\left(\frac{\pi}{6}\right)+e^{0.03|t|}\sin(0.3t)\cos\left(\frac{\pi}{6}\right)
 \right),\quad 6<t<60.
-\]
+$$
 
 ## Repository structure
 
