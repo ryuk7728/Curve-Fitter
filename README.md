@@ -1,4 +1,4 @@
-# Parametric Curve Parameter Recovery
+# Parametric Curve Fitting
 
 This repository recovers the unknown parameters $\theta$, $M$, and $X$
 of the supplied parametric curve from the unordered points in `xy_data.csv`.
@@ -24,21 +24,24 @@ $$
 \left(
 t\cos\left(\frac{\pi}{6}\right)-e^{0.03|t|}\sin(0.3t)\sin\left(\frac{\pi}{6}\right)+55,
 \;42+t\sin\left(\frac{\pi}{6}\right)+e^{0.03|t|}\sin(0.3t)\cos\left(\frac{\pi}{6}\right)
-\right),\quad 6<t<60.
+\right).
 $$
 
-## Repository structure
+## Solution explanation
 
-```text
-.
-├── README.md          # Results, repository contents, and run instructions
-├── APPROACH.md        # Explanation of the solution approach
-├── solve_curve.py     # Parameter-fitting implementation
-├── xy_data.csv        # Supplied curve points
-├── result.json        # Recovered parameters and L1 loss
-├── requirements.txt   # Python dependencies
-└── .gitignore         # Files excluded from Git
-```
+The complete mathematical derivation and programmatic approach are documented
+in **[APPROACH.md](./APPROACH.md)**.
+
+## Repository contents
+
+| File | Purpose |
+|---|---|
+| **[APPROACH.md](./APPROACH.md)** | **Complete mathematical reasoning and programmatic solution approach** |
+| [`solve_curve.py`](./solve_curve.py) | Parameter-fitting implementation |
+| [`xy_data.csv`](./xy_data.csv) | Supplied curve points |
+| [`result.json`](./result.json) | Recovered parameters and L1 loss |
+| [`requirements.txt`](./requirements.txt) | Python dependencies |
+| [`.gitignore`](./.gitignore) | Files excluded from Git |
 
 ## Run locally
 
