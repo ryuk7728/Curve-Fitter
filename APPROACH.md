@@ -38,7 +38,7 @@ $$
 
 We can now rewrite these equations in matrix form:
 
-$$
+```math
 \begin{pmatrix}x-X\\y-42\end{pmatrix}
 =
 \begin{pmatrix}
@@ -46,7 +46,7 @@ $$
 \sin\theta&\cos\theta
 \end{pmatrix}
 \begin{pmatrix}t\\q(t)\end{pmatrix}.
-$$
+```
 
 The interpretation of this matrix is that the point $(t,q(t))$ is rotated by
 $\theta$ and then shifted by $(X,42)$.
@@ -55,7 +55,7 @@ Therefore, for any proposed values of $\theta$ and $X$, I can undo the
 rotation by applying the inverse rotation matrix $R(-\theta)$ to the shifted
 data point:
 
-$$
+```math
 \begin{pmatrix}\hat t_i\\\hat q_i\end{pmatrix}
 =
 \begin{pmatrix}
@@ -63,7 +63,7 @@ $$
 \sin(-\theta)&\cos(-\theta)
 \end{pmatrix}
 \begin{pmatrix}x_i-X\\y_i-42\end{pmatrix}.
-$$
+```
 
 Expanding this matrix gives an independently recovered value of $t$ and
 $q(t)$ for every supplied point:
@@ -144,5 +144,4 @@ The very small loss and the numerical values indicate the clean solution
 $$
 \boxed{\theta=30^\circ,\qquad M=0.03,\qquad X=55}.
 $$
-
 
